@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160004">
+<title>For  Happy Birthday Reddy ❤️</title>
+<style>
+:root {
+  --red: #ff2038;
+  --deep-red: #a50019;
+  --text: #fff4f4;
+  --muted: #f3dfe2;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  text-align: center;
+  background: linear-gradient(135deg, #080808, #390008, #160000, #650014);
+  background-size: 300% 300%;
+  animation: backgroundGlow 14s ease infinite;
+  overflow-x: hidden;
+}
+body.modal-open { overflow: hidden; }
+body.awaiting-touch { overflow: hidden; }
+#touchScreen { position: fixed; inset: 0; z-index: 500; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px; background: radial-gradient(circle at center, #350008 0%, #150001 55%, #050000 100%); transition: opacity .75s ease, visibility .75s ease; }
+#touchScreen.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+.touch-heart { border: 0; background: transparent; margin: 0; padding: 14px; font-size: clamp(90px, 24vw, 150px); line-height: 1; filter: drop-shadow(0 0 10px #ff173b) drop-shadow(0 0 28px #ff173b88); animation: heartBeat 1.25s ease-in-out infinite; }
+.touch-heart:hover, .touch-heart:focus-visible { background: transparent; box-shadow: none; transform: scale(1.07); }
+.touch-caption { margin: 0; font: 13px/1.6 Arial, sans-serif; letter-spacing: 4px; color: #ffd9df; text-transform: uppercase; }
+.touch-note { margin: 0; color: #ff8b9a; font-size: 14px; }
+@keyframes heartBeat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.1); } 30% { transform: scale(1); } 45% { transform: scale(1.07); } }
+main.reveal-ready { animation: revealPage .9s ease both; }
+@keyframes revealPage { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes backgroundGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+main {
+  width: min(92%, 720px);
+  margin: clamp(14px, 4vh, 35px) auto;
+  padding: clamp(22px, 5vw, 38px) clamp(15px, 4vw, 28px);
+  border: 1px solid #ff303055;
+  border-radius: 25px;
+  background: rgba(20, 0, 0, .82);
+  box-shadow: 0 0 42px #ff001c42, inset 0 0 24px #ff001c08;
+  animation: appear 1s ease both;
+}
+@keyframes appear {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.small {
+  color: #ff7777;
+  letter-spacing: 3px;
+  font: 12px/1.6 Arial, sans-serif;
+  text-transform: uppercase;
+}
+h1 {
+  color: var(--red);
+  font-size: clamp(2.2rem, 9vw, 3.8rem);
+  line-height: 1.12;
+  text-shadow: 0 0 20px #ff001c88;
+  margin: 22px 0;
+}
+.name {
+  color: #fff;
+  font-size: clamp(1.65rem, 6vw, 2.45rem);
+  line-height: 1.25;
+  margin: 22px 0;
+  overflow-wrap: anywhere;
+}
+.cake {
+  font-size: clamp(4rem, 15vw, 5.3rem);
+  margin: 22px 0;
+  animation: float 1.7s ease-in-out infinite alternate;
+}
+@keyframes float { to { transform: translateY(-9px); } }
+p {
+  font-size: clamp(15px, 3.8vw, 17px);
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.intro {
+  max-width: 500px;
+  margin: auto;
+  color: var(--muted);
+}
+button {
+  max-width: 100%;
+  margin: 13px 4px;
+  padding: 14px 22px;
+  border: 1px solid #ff3548;
+  border-radius: 30px;
+  background: var(--deep-red);
+  color: white;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background .25s, box-shadow .25s, transform .25s;
+  touch-action: manipulation;
+}
+button:hover, button:focus-visible {
+  background: #ed002a;
+  box-shadow: 0 0 22px #ff001c88;
+  transform: translateY(-2px);
+  outline: none;
+}
+.redHeart {
+  color: var(--red);
+  text-shadow: 0 0 12px #ff001c;
+  font-size: 27px;
+}
+.wishes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+.wish {
+  min-width: 0;
+  border: 1px solid #ff303e44;
+  border-radius: 15px;
+  padding: 16px 10px;
+  background: #ff001c0c;
+}
+.wish p { font-size: 14px; margin-bottom: 0; }
+footer {
+  margin-top: 30px;
+  color: #ff8b92;
+  font: 13px/2 Arial, sans-serif;
+}
+.floatingHeart {
+  position: fixed;
+  bottom: -50px;
+  z-index: 150;
+  pointer-events: none;
+  color: var(--red);
+  text-shadow: 0 0 12px #ff001c;
+  animation: rise 5s linear forwards;
+}
+@keyframes rise {
+  to { transform: translateY(-115vh) rotate(20deg); opacity: 0; }
+}
+
+/* Letter opens as a centered popup instead of scrolling the page */
+#letterModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  padding: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: rgba(0, 0, 0, .84);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+}
+#letterModal.is-open { display: flex; animation: fadeIn .35s ease both; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.letterCard {
+  position: relative;
+  width: min(100%, 650px);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: auto;
+  padding: clamp(18px, 4vw, 30px);
+  text-align: left;
+  border-radius: 22px;
+  border: 1px solid #ff303e;
+  background: linear-gradient(145deg, #36000b, #160006 55%, #100000);
+  box-shadow: 0 0 35px #ff001c55;
+  animation: letterPop .65s cubic-bezier(.18,.89,.32,1.2) both;
+}
+@keyframes letterPop {
+  from { opacity: 0; transform: translateY(35px) scale(.88); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.letterCard h2 {
+  text-align: center;
+  color: #ff555f;
+  font-size: clamp(1.35rem, 5vw, 1.8rem);
+  font-weight: normal;
+  line-height: 1.4;
+}
+.letterCard p { color: #f5e8e8; }
+.signature {
+  text-align: right;
+  color: #ff7c85 !important;
+  font-style: italic;
+}
+.closeButton {
+  display: block;
+  margin: 18px auto 0;
+}
+#lastSurprise {
+  display: none;
+  padding: 15px 8px 3px;
+  text-align: center;
+  animation: appear .7s ease both;
+}
+#lastSurprise p { text-align: center; }
+@media (max-width: 480px) {
+  main { width: calc(100% - 22px); margin: 11px auto; border-radius: 20px; }
+  .wishes { gap: 9px; }
+  .wish { padding: 13px 8px; }
+  #letterModal { padding: 9px; align-items: center; }
+  .letterCard { max-height: calc(100dvh - 18px); padding: 18px 15px; border-radius: 18px; }
+  .letterCard p { line-height: 1.72; }
+  button { padding: 13px 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body class="awaiting-touch">
+<div id="touchScreen" aria-label="A little surprise">
+  <button class="touch-heart" type="button" onclick="revealBirthday()" aria-label="Touch the heart to open the birthday surprise">❤️</button>
+  <p class="touch-caption">Touch me</p>
+  <p class="touch-note">A little surprise is waiting for you… ✨</p>
+</div>
+<main id="birthdayPage" style="visibility:hidden; opacity:0;">
+  <div class="redHeart">❤️ ❤️ ❤️</div>
+  <p class="small">A little piece of my heart, made just for you</p>
+  <h1>For Someone Special</h1>
+  <div class="name">Reddy ❤️</div>
+  <div class="cake">🎂</div>
+  <p class="intro">
+    Some people become special without even trying.<br>
+    And somehow, you became one of those people for me. ❤️
+  </p>
+  <p class="redHeart">❤️</p>
+  <p>There are feelings that are hard to explain, so I made this little place to say what words sometimes cannot. ❤️</p>
+  <button type="button" onclick="openLetter()">There is something from my heart ❤️</button>
+
+  <div class="wishes">
+    <div class="wish"><div class="redHeart">❤️</div><p>You deserve the kind of happiness that stays.</p></div>
+    <div class="wish"><div class="redHeart">❤️</div><p>I hope life is gentle with your heart.</p></div>
+    <div class="wish"><div class="redHeart">❤️</div><p>May every dream bring you closer to your best days.</p></div>
+    <div class="wish"><div class="redHeart">❤️</div><p>I hope you always remember how much you matter.</p></div>
+  </div>
+  <footer>Made with more feeling than these words can show.<br>A little memory, just for you. ❤️</footer>
+</main>
+
+<div id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle" aria-hidden="true">
+  <section class="letterCard">
+    <div class="redHeart" style="text-align:center">❤️ ❤️ ❤️</div>
+    <h2 id="letterTitle">Something I wanted you to know ❤️</h2>
+    <p>Dear Reddy,</p>
+    <p>First of all, Many More Happy Returns Of The Day ❤️</p>
+    <p>
+      Sometimes, a person slowly becomes special without even realizing it.
+      It can be the smallest conversations, a random smile, or simply the
+      feeling that talking to them makes an ordinary day a little better.
+      Somehow, you became that kind of person to me.
+    </p>
+    <p>
+      I may not always know how to explain it, and maybe I do not need to.
+      I just know that you have a place in my thoughts that feels different
+      from most people. I value that feeling, and I wanted you to have
+      something that reminds you how appreciated you are.
+    </p>
+    <p>
+      On your birthday, I wish you endless happiness, good health, success,
+      peace of mind, and the courage to chase every dream you carry.
+      I hope this year gives you countless reasons to smile and memories
+      you'll always treasure.
+    </p>
+    <p>
+      Always believe in yourself, even on the days when life gets difficult.
+      You have so much ahead of you, and I hope you keep moving forward
+      with confidence.
+    </p>
+    <p>
+      Thank you for being you, Sai. I am genuinely glad our paths crossed.
+      You might see this as just a little birthday website, but I put real
+      care into making it because you are someone I wanted to make smile.
+    </p>
+    <p>
+      Maybe this is my quiet way of saying that you are special to me.
+      No big confession, no pressure, and no need to find the perfect reply.
+      I just hope this makes you smile and reminds you that someone is
+      genuinely wishing beautiful things for you. ❤️
+    </p>
+    <h2>Happy Birthday, Abbai! ❤️</h2>
+    <p>Keep smiling. Keep growing. Keep being yourself. May happiness always find its way to you.</p>
+    <p class="signature">With a little more feeling than I can explain,<br>Siri ❤️</p>
+
+    <div style="text-align:center">
+      <button type="button" onclick="showFinal()">One last surprise ❤️</button>
+    </div>
+    <div id="lastSurprise">
+      <div class="redHeart">❤️ ❤️ ❤️</div>
+      <h2>A Little Truth ❤️</h2>
+      <p>
+        Some people are easy to care about, even when you cannot explain why.<br><br>
+        You are one of those people for me, Sai.<br><br>
+        I hope life gives you as much happiness as you bring into the lives around you. ❤️
+      </p>
+    </div>
+    <button class="closeButton" type="button" onclick="closeLetter()">Close message ❤️</button>
+  </section>
+</div>
+
+<script>
+const modal = document.getElementById("letterModal");
+function revealBirthday() {
+  const screen = document.getElementById("touchScreen");
+  const page = document.getElementById("birthdayPage");
+  screen.classList.add("gone");
+  document.body.classList.remove("awaiting-touch");
+  page.style.visibility = "visible";
+  page.style.opacity = "1";
+  page.classList.add("reveal-ready");
+  createHearts(12);
+  setTimeout(() => screen.remove(), 800);
+}
+
+function createHearts(count) {
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("span");
+      heart.className = "floatingHeart";
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (18 + Math.random() * 22) + "px";
+      heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7500);
+    }, i * 75);
+  }
+}
+
+function openLetter() {
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+  createHearts(25);
+  const card = modal.querySelector(".letterCard");
+  card.scrollTop = 0;
+  modal.querySelector(".closeButton").focus({ preventScroll: true });
+}
+
+function closeLetter() {
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  document.querySelector('button[onclick="openLetter()"]').focus({ preventScroll: true });
+}
+
+function showFinal() {
+  const finalMessage = document.getElementById("lastSurprise");
+  finalMessage.style.display = "block";
+  createHearts(35);
+  finalMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+modal.addEventListener("click", function(event) {
+  if (event.target === modal) closeLetter();
+});
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape" && modal.classList.contains("is-open")) {
+    closeLetter();
+  }
+});
+
+setInterval(() => createHearts(1), 1800);
+</script>
+</body>
+</html>
